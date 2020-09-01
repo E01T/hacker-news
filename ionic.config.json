@@ -1,0 +1,7 @@
+{
+  "name": "HackerNews",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
