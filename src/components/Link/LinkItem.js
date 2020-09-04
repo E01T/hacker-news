@@ -19,9 +19,9 @@ import {
 import { getHostName } from "../../helpers/domain.js";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
-const LinkItem = ({ link, index, showCount, url }) => {
+const LinkItem = ({ link, index, showCount, url, browser }) => {
   return (
-    <IonCard routerLink={url} button>
+    <IonCard routerLink={url} onClick={browser} button>
       <IonCardContent class="ion-no-padding">
         <IonList lines="none">
           <IonItem>
@@ -58,7 +58,7 @@ const LinkItem = ({ link, index, showCount, url }) => {
               </p>
 
               <div
-                aria-labelledby="link description"
+                aria-describedby="link description"
                 className="ion-padding-vertical ion-text-wrap"
               >
                 <strong style={{ fontSize: "1rem" }}>{link.description}</strong>

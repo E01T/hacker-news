@@ -23,6 +23,7 @@ import Submit from "./pages/Tabs/Submit";
 import Search from "./pages/Tabs/Search";
 import Profile from "./pages/Tabs/Profile";
 import EditProfile from "./pages/Auth/EditProfile";
+import Link from "./pages/Link";
 import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
 import Forgot from "./pages/Auth/Forgot";
@@ -70,6 +71,7 @@ const App = () => {
               <Route path="/register" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot" component={Forgot} />
+              <Route path="/link/:linkId" component={Link} />
               <Route component={() => <Redirect to="/news" />} />
             </IonRouterOutlet>
             <IonTabBar slot="bottom">
