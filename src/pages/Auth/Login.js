@@ -32,9 +32,9 @@ const Login = props => {
 
   async function authenticateUser() {
     setBusy(true);
-    const { name, email, password } = values;
+    const { email, password } = values;
     try {
-      await firebase.register(name, email, password);
+      await firebase.login(email, password);
       toast("You have loged in successfully!");
       props.history.push("/");
     } catch (err) {

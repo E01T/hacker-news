@@ -2,30 +2,32 @@ import React from "react";
 import { Redirect, Route } from "react-router-dom";
 import {
   IonApp,
-  IonRouterOutlet,
-  IonTabs,
-  IonTabBar,
-  IonTabButton,
   IonIcon,
   IonLabel,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonTabs,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import {
   newspaperOutline,
-  trendingUpOutline,
-  createOutline,
   searchOutline,
   personCircleOutline,
+  createOutline,
+  trendingUpOutline,
 } from "ionicons/icons";
 import News from "./pages/Tabs/News";
-import Profile from "./pages/Tabs/Profile";
-import Search from "./pages/Tabs/Search";
-import Submit from "./pages/Tabs/Submit";
 import Trending from "./pages/Tabs/Trending";
+import Submit from "./pages/Tabs/Submit";
+import Search from "./pages/Tabs/Search";
+import Profile from "./pages/Tabs/Profile";
 import EditProfile from "./pages/Auth/EditProfile";
-import Forgot from "./pages/Auth/Forgot";
 import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
+import Forgot from "./pages/Auth/Forgot";
+import useAuth from "./hooks/useAuth";
+import UserContext from "./context/UserContext";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -46,12 +48,8 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 
-import useAuth from "./hooks/useAuth";
-import UserContext from "./context/UserContext";
-
 const App = () => {
   const [user, setUser] = useAuth();
-
   return (
     <IonApp>
       <IonReactRouter>
@@ -69,15 +67,15 @@ const App = () => {
               <Route path="/search" component={Search} />
               <Route path="/profile" component={Profile} />
               <Route path="/edit-profile" component={EditProfile} />
-              <Route path="/forgot" component={Forgot} />
-              <Route path="/login" component={Login} />
               <Route path="/register" component={Signup} />
+              <Route path="/login" component={Login} />
+              <Route path="/forgot" component={Forgot} />
               <Route component={() => <Redirect to="/news" />} />
             </IonRouterOutlet>
             <IonTabBar slot="bottom">
               <IonTabButton tab="news" href="/news">
                 <IonIcon icon={newspaperOutline} />
-                <IonLabel>Hacker News</IonLabel>
+                <IonLabel>Newsy</IonLabel>
               </IonTabButton>
               <IonTabButton tab="trending" href="/trending">
                 <IonIcon icon={trendingUpOutline} />
@@ -102,5 +100,4 @@ const App = () => {
     </IonApp>
   );
 };
-
 export default App;
