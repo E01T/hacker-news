@@ -22,7 +22,7 @@ const INITIAL_STATE = {
   password: "",
 };
 
-const Signup = props => {
+const Signup = ({ history }) => {
   const { handleSubmit, handleChange, values, isSubmitting } = useForm(
     INITIAL_STATE,
     validateSignup,
@@ -36,7 +36,7 @@ const Signup = props => {
     try {
       await firebase.register(name, email, password);
       toast("You have signed up successfully!");
-      props.history.push("/");
+      history.push("/news");
     } catch (err) {
       console.error("Authentication error", err);
       toast(err.message);

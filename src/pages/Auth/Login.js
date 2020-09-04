@@ -22,7 +22,7 @@ const INITIAL_STATE = {
   password: "",
 };
 
-const Login = props => {
+const Login = ({ history }) => {
   const { handleSubmit, handleChange, values, isSubmitting } = useForm(
     INITIAL_STATE,
     validateLogin,
@@ -36,7 +36,7 @@ const Login = props => {
     try {
       await firebase.login(email, password);
       toast("You have loged in successfully!");
-      props.history.push("/");
+      history.push("/news");
     } catch (err) {
       console.error("Login error", err);
       toast(err.message);
