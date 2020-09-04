@@ -1,14 +1,16 @@
 import React from "react";
-import { IonPage, IonContent } from "@ionic/react";
-import LargeHeader from "../../components/Header/LargeHeader";
+import { IonContent, IonPage } from "@ionic/react";
+import LinkList from "../../components/Link/LinkList";
 import SmallHeader from "../../components/Header/SmallHeader";
+import LargeHeader from "../../components/Header/LargeHeader";
 
-export const News = () => {
+const News = props => {
   return (
     <IonPage>
-      <SmallHeader title="Hacker News" />
-      <IonContent fullscreen>
-        <LargeHeader title="Hacker News" />
+      <SmallHeader title="Newsy" />
+      <IonContent>
+        <LargeHeader title="Newsy" />
+        <LinkList location={props.location} />
       </IonContent>
     </IonPage>
   );
