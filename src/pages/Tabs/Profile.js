@@ -27,9 +27,11 @@ export const Profile = props => {
     try {
       await firebase.logout();
       toast("You have successfully logged out");
-      props.history.push("/");
+      console.log(props);
     } catch (error) {
       toast(error.message);
+    } finally {
+      props.history.push("/");
     }
   }
   return (
