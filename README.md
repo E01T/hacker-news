@@ -110,3 +110,32 @@ An email with a reset link will be send to you.
       2. Hosting URL: https://hackernews-9k145.web.app
       3. Copy the Hosting URL and paste it to your favorite browser, and you should see the web app.
     * This is it. Enjoy.
+    ### Dependencies
+    The main components are **Ionic-React** and **firebase/firestore**. 
+    ```
+    "dependencies": {
+    "@capacitor/android": "^2.4.0",
+    "@capacitor/core": "2.4.0",
+    "@capacitor/ios": "^2.4.0",
+    "@ionic/react": "^5.0.7",
+    "@ionic/react-router": "^5.0.7",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^8.0.3",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.24",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router": "^5.1.4",
+    "@types/react-router-dom": "^5.1.3",
+    "date-fns": "^2.16.1",
+    "firebase": "^7.19.1",
+    "ionicons": "^5.0.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
+    "typescript": "3.8.3"
+  },
+  ```
