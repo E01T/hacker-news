@@ -20,7 +20,7 @@ And finally, in case you forgot your password, you can reset it by providing the
 An email with a reset link will be send to you.
 
 ### Running the project locally
-#### *Live version* [hacker-news](https://hackernews-8b245.web.app/)
+#### *Live version* [hacker-news](https://hack-the-news-8c480.web.app/news)
 1. First download the project by running ```git clone https://github.com/E01T/hacker-news.git``` on your local machine or download the zip file.
 2. Go into the hacker-news directory e.g. ```cd hacker-news```
 3. run ```npm install``` to install dependencies
